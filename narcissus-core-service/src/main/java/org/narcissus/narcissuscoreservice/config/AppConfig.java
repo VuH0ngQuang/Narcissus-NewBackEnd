@@ -8,8 +8,8 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 @ConfigurationProperties(prefix = "app")
 @Data
 public class AppConfig {
-    private final Kafka kafka;
-    private final Channels channels;
+    private Kafka kafka;
+    private Channels channels;
 
     @Data
     public static class Kafka{

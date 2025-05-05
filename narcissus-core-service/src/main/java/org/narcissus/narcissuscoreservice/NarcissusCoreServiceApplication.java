@@ -9,9 +9,7 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 @EnableConfigurationProperties({AppConfig.class, SpringConfig.class})
 @SpringBootApplication
 public class NarcissusCoreServiceApplication {
-
 	public static void main(String[] args) {
 		SpringApplication.run(NarcissusCoreServiceApplication.class, args);
 	}
-
 }

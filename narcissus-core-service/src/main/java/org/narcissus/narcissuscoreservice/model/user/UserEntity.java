@@ -1,20 +1,29 @@
-package org.narcissus.narcissuscoreservice.model;
+package org.narcissus.narcissuscoreservice.model.user;
+
+import lombok.Builder;
+import lombok.Data;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.Date;
 import java.util.Objects;
+import java.util.Set;
+import java.util.UUID;
 
+@Data
+@Document(collection = "users")
 public class UserEntity {
-    //    @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long userId;
+    @Id
+    private String userId;
     private String email;
     private String password;
     //    private boolean admin;
-//    @Column(name = "username")
     private String userName;
     private String phoneNumber;
     private String address;
     private Date date;
+
+    private Set<UserCart> userCarts;
 
     @Override
     public int hashCode() {
