@@ -11,5 +11,6 @@ app:
 
   channels:
     user: "user-service-channel"
-    core: "core-service-channel"
+    product: "product-service-channel"
+    review: "review-service-channel"
     notification: "notification-service-channel"

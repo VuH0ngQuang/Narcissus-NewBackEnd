@@ -15,21 +15,24 @@ import java.util.Map;
 import java.util.function.Function;
 
 @Component
-public class UserRouter {
-    private static final Logger log = LoggerFactory.getLogger(UserRouter.class);
+public class UserUriRouter {
+    private static final Logger log = LoggerFactory.getLogger(UserUriRouter.class);
     private final UserService userService;
-    private ObjectMapper objectMapper;
+    private final ObjectMapper objectMapper;
     private final ErrorHandler errorHandler;
     private final Map<String, Function<Message, ResponsePayload>> routers;
 
     @Autowired
-    public UserRouter(UserService userService, ObjectMapper objectMapper, ErrorHandler errorHandler) {
+    public UserUriRouter(UserService userService, ObjectMapper objectMapper, ErrorHandler errorHandler) {
         this.userService = userService;
         this.errorHandler = errorHandler;
         this.objectMapper = objectMapper;
         this.routers = Map.of(
                 "/api/v1/user/createUser", this::handleCreateUser,
-                "/api/v1/user/updateUser", this::handleUpdateUser
+                "/api/v1/user/updateUser", this::handleUpdateUser,
+                "/api/v1/user/addToCart", this::handleAddToCart,
+                "/api/v1/user/removeFromCart", this::handleRemoveFromCart,
+                "/api/v1/user/removeAllFromCart", this::handleRemoveAllFromCart
         );
     }
 
@@ -39,7 +42,34 @@ public class UserRouter {
         if (handler != null) {
             return handler.apply(message);
         } else {
-            return errorHandler.error("No route found", "route USERROUTER");
+            return errorHandler.error("No route found", "route UserUriRouter");
+        }
+    }
+
+    public ResponsePayload handleAddToCart(Message message) {
+        try {
+            UserEntity request = Message.getPayload(objectMapper, message, UserEntity.class);
+            return userService.addToCart(request);
+        } catch (Exception e) {
+            return errorHandler.error(e.getMessage(), "handleAddToCart UserUriRouter");
+        }
+    }
+
+    public ResponsePayload handleRemoveFromCart(Message message) {
+        try {
+            UserEntity request = Message.getPayload(objectMapper, message, UserEntity.class);
+            return userService.removeCart(request);
+        } catch (Exception e) {
+            return errorHandler.error(e.getMessage(), "handleRemoveFromCart UserUriRouter");
+        }
+    }
+
+    public ResponsePayload handleRemoveAllFromCart(Message message) {
+        try {
+            UserEntity request = Message.getPayload(objectMapper, message, UserEntity.class);
+            return userService.removeAllCart(request);
+        } catch (Exception e) {
+            return errorHandler.error(e.getMessage(), "handleRemoveAllFromCart UserUriRouter");
         }
     }
 
@@ -48,7 +78,7 @@ public class UserRouter {
             UserEntity request = Message.getPayload(objectMapper, message, UserEntity.class);
             return userService.updateUser(request);
         } catch (Exception e) {
-            return errorHandler.error(e.getMessage(), "handleUpdateUser USERROUTER");
+            return errorHandler.error(e.getMessage(), "handleUpdateUser UserUriRouter");
         }
     }
 
@@ -57,7 +87,7 @@ public class UserRouter {
             UserEntity request = Message.getPayload(objectMapper, message, UserEntity.class);
             return userService.createUser(request);
         } catch (Exception e) {
-            return errorHandler.error(e.getMessage(), "handelCreateUser USERROUTER");
+            return errorHandler.error(e.getMessage(), "handelCreateUser UserUriRouter");
         }
     }
 }

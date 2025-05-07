@@ -21,7 +21,8 @@ public class AppConfig {
     @Data
     public static class Channels {
         private String user;
-        private String core;
+        private String product;
+        private String review;
         private String notification;
     }
 }

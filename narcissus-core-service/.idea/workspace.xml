@@ -6,22 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="66c8480f-edff-4110-9788-23a18fa8d309" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/narcissus/narcissuscoreservice/NarcissusCoreServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/narcissus/narcissuscoreservice/NarcissusCoreServiceApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/narcissus/narcissuscoreservice/config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/narcissus/narcissuscoreservice/config/AppConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/narcissus/narcissuscoreservice/config/SpringConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/narcissus/narcissuscoreservice/config/SpringConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/narcissus/narcissuscoreservice/kafka/KafkaRequestHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/narcissus/narcissuscoreservice/kafka/KafkaRequestHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/narcissus/narcissuscoreservice/model/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/narcissus/narcissuscoreservice/model/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/narcissus/narcissuscoreservice/model/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/narcissus/narcissuscoreservice/model/UserEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/narcissus/narcissuscoreservice/services/UserHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/narcissus/narcissuscoreservice/handler/UserHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/narcissus/narcissuscoreservice/handler/UserHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/narcissus/narcissuscoreservice/handler/UserHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/narcissus/narcissuscoreservice/model/user/Role.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/narcissus/narcissuscoreservice/model/user/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/narcissus/narcissuscoreservice/model/user/UserEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/narcissus/narcissuscoreservice/router/UserRouter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/narcissus/narcissuscoreservice/router/UserUriRouter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/narcissus/narcissuscoreservice/services/userEntity/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/narcissus/narcissuscoreservice/services/userEntity/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/NarcissusCoreServiceApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/NarcissusCoreServiceApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/config/AppConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/config/AppConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/config/SpringConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/config/SpringConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/kafka/KafkaRequestHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/kafka/KafkaRequestHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/model/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/model/Message.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/services/UserHandler.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,8 +22,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -133,7 +124,9 @@
       <workItem from="1746365023094" duration="7426000" />
       <workItem from="1746414228062" duration="6781000" />
       <workItem from="1746425121711" duration="12106000" />
-      <workItem from="1746456525734" duration="595000" />
+      <workItem from="1746456525734" duration="5623000" />
+      <workItem from="1746494982630" duration="4518000" />
+      <workItem from="1746516169544" duration="8986000" />
     </task>
     <servers />
   </component>
