@@ -2,7 +2,7 @@ package org.narcissus.narcissuscoreservice.router;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.narcissus.narcissuscoreservice.exceptions.ErrorHandler;
-import org.narcissus.narcissuscoreservice.model.Message;
+import org.narcissus.narcissuscoreservice.model.messagePayload.Message;
 import org.narcissus.narcissuscoreservice.model.user.UserEntity;
 import org.narcissus.narcissuscoreservice.model.messagePayload.ResponsePayload;
 import org.narcissus.narcissuscoreservice.services.userEntity.UserService;

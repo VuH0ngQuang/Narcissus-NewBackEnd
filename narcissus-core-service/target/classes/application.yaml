@@ -1,0 +1,17 @@
+spring:
+  data:
+    mongodb:
+      uri: ${DB_ENDPOINT:mongodb://root:adminphs@localhost:27017/narcissus?directConnection=true&serverSelectionTimeoutMS=2000&authSource=admin&appName=mongosh+1.6.0}
+
+app:
+  kafka:
+    url: ${KAFKA_URL:localhost:9092}
+    timeout: ${KAFKA_TIMEOUT:15000}
+    clusterId: ${CLUSTER_ID:narcissus-core-dev-quang}
+
+  channels:
+    user: "user-service-channel"
+    product: "product-service-channel"
+    review: "review-service-channel"
+    order: "order-service-channel"
+    notification: "notification-service-channel"

@@ -2,7 +2,7 @@ package org.narcissus.narcissuscoreservice.router;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.narcissus.narcissuscoreservice.exceptions.ErrorHandler;
-import org.narcissus.narcissuscoreservice.model.Message;
+import org.narcissus.narcissuscoreservice.model.messagePayload.Message;
 import org.narcissus.narcissuscoreservice.model.messagePayload.ResponsePayload;
 import org.narcissus.narcissuscoreservice.model.product.Product;
 import org.narcissus.narcissuscoreservice.services.product.ProductService;
@@ -31,6 +31,14 @@ public class ProductUriRouter {
                 "api/v1/product/createProduct", this::handleCreateProduct,
                 "api/v1/product/updateProduct", this::handleUpdateProduct
         );
+    }
+
+    public ResponsePayload route(Message message) {
+        String uri = message.getUri();
+        Function<Message, ResponsePayload> handler = routers.get(uri);
+        if (handler != null) {
+            return handler.apply(message);
+        } else return errorHandler.error("No route found", "route ProductUriRouter");
     }
 
     public ResponsePayload handleCreateProduct(Message message) {

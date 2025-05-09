@@ -3,7 +3,7 @@ package org.narcissus.narcissuscoreservice.handler;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.narcissus.narcissuscoreservice.config.AppConfig;
 import org.narcissus.narcissuscoreservice.constants.MessageTypeEnum;
-import org.narcissus.narcissuscoreservice.model.Message;
+import org.narcissus.narcissuscoreservice.model.messagePayload.Message;
 import org.narcissus.narcissuscoreservice.kafka.KafkaRequestHandler;
 import org.narcissus.narcissuscoreservice.model.messagePayload.ResponsePayload;
 import org.narcissus.narcissuscoreservice.router.UserUriRouter;

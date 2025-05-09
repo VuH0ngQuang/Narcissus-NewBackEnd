@@ -23,6 +23,7 @@ public class AppConfig {
         private String user;
         private String product;
         private String review;
+        private String order;
         private String notification;
     }
 }

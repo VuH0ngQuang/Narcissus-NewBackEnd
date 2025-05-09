@@ -7,7 +7,7 @@ import org.apache.kafka.clients.producer.Producer;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.common.serialization.UUIDDeserializer;
 import org.narcissus.narcissuscoreservice.constants.MessageTypeEnum;
-import org.narcissus.narcissuscoreservice.model.Message;
+import org.narcissus.narcissuscoreservice.model.messagePayload.Message;
 import org.apache.kafka.common.serialization.StringDeserializer;
 import org.narcissus.narcissuscoreservice.model.messagePayload.ResponsePayload;
 import org.slf4j.Logger;

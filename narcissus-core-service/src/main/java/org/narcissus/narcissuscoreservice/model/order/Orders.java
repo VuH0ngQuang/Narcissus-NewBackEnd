@@ -13,7 +13,7 @@ public class Orders {
     @Id
     private String ordersId;
     private long money;
-    private boolean shipped;
+    private Boolean shipped;
     private String address;
     private String status;
     private Date date;

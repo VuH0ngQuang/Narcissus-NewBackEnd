@@ -34,13 +34,10 @@ public class UserService {
     public ResponsePayload createUser (UserEntity request) {
         try {
             if (userRepository.existsByEmail(request.getEmail())) return errorHandler.error("Email already used","createUser USERSERVICE");
-            List<String> nullList = NullFieldChecker.check(request);
-            if (!nullList.isEmpty()) {
-                request.setDate(new Date());
-                request.setPassword(passwordEncoder.encode(request.getPassword()));
-
-                return save(request);
-            } else return errorHandler.error(nullList.toString()+"is null", "createUser UserService");
+            request.setDate(new Date());
+            request.setPassword(passwordEncoder.encode(request.getPassword()));
+            
+            return save(request, "createUser USERSERVICE");
         } catch (Exception e) {
             return errorHandler.error(e.getMessage(),"createUser USERSERVICE");
         }
@@ -50,13 +47,11 @@ public class UserService {
         try {
             UserEntity user = findUser(request.getUserId());
             if (user !=null) {
-
                 if (request.getPassword()!=null) user.setPassword(passwordEncoder.encode(request.getPassword()));
                 if (request.getUserName()!=null) user.setUserName(request.getUserName());
                 if (request.getPhoneNumber()!=null) user.setPhoneNumber(request.getPhoneNumber());
                 if (request.getAddress()!=null) user.setAddress(request.getAddress());
-
-                return save(user);
+                return save(user, "updateUser USERSERVICE");
             } else return errorHandler.error("Cannot find user with ID: "+request.getUserId(),"updateUser USERSERVICE");
         } catch (Exception e) {
             return errorHandler.error(e.getMessage(), "updateUser USERSERVICE");
@@ -67,11 +62,9 @@ public class UserService {
         try {
             UserEntity user = findUser(request.getUserId());
             if (user !=null) {
-
                 Set<UserCart> carts = user.getUserCarts();
                 request.getUserCarts().parallelStream().forEach(carts::add);
-
-                return save(user);
+                return save(user, "addToCart USERSERVICE");
             } else return errorHandler.error("Cannot find user with ID: "+request.getUserId(),"addToCart USERSERVICE");
         } catch (Exception e) {
             return errorHandler.error(e.getMessage(), "addToCart USERSERVICE");
@@ -82,10 +75,8 @@ public class UserService {
         try {
             UserEntity user = findUser(request.getUserId());
             if (user != null) {
-
                 user.getUserCarts().clear();
-
-                return save(user);
+                return save(user, "updateUser USERSERVICE");
             } else return errorHandler.error("Cannot find user with ID: "+request.getUserId(),"removeAllCart USERSERVICE");
         } catch (Exception e) {
             return errorHandler.error(e.getMessage(), "updateUser USERSERVICE");
@@ -95,17 +86,18 @@ public class UserService {
     public ResponsePayload removeCart(UserEntity request) {
         UserEntity user = findUser(request.getUserId());
         if (user != null) {
-
             user.getUserCarts().removeAll(request.getUserCarts());
-
-            return save(user);
+            return save(user, "removeCart USERSERVICE");
         } else return errorHandler.error("Cannot find user with ID: "+request.getUserId(),"removeCart USERSERVICE");
     }
 
     private UserEntity findUser(String userId) {return userRepository.findById(userId).orElse(null);}
 
-    private ResponsePayload save(UserEntity user) {
+    private ResponsePayload save(UserEntity user, String function) {
+       List<String> nullList = NullFieldChecker.check(user,  "userCarts","userId");
+       if (nullList.isEmpty()) {
         userRepository.save(user);
         return ResponsePayload.builder().messageStatusEnum(MessageStatusEnum.OK).build();
+       } else return errorHandler.error(nullList.toString()+"is null", function);
     }
 }

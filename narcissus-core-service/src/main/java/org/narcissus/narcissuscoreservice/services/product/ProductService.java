@@ -28,12 +28,9 @@ public class ProductService {
 
     public ResponsePayload createProduct(Product request) {
         try {
-            List<String> nullList = NullFieldChecker.check(request);
-            if (!nullList.isEmpty()) {
-                request.setProductDate(new Date());
-                return save(request);
-            }
-            return errorHandler.error(nullList.toString()+"is null", "createProduct ProductService");
+            request.setProductDate(new Date());
+            
+            return save(request, "createProduct ProductService");
         } catch (Exception e) {
             return errorHandler.error(e.getMessage(), "createProduct ProductService");
         }
@@ -49,7 +46,7 @@ public class ProductService {
                 if (request.getProductStockQuantity() > 0) product.setProductStockQuantity(request.getProductStockQuantity());
                 if (request.getProductPrice() > 0) product.setProductPrice(request.getProductPrice());
                 if (request.getProductImage() != null) product.setProductImage(request.getProductImage());
-                return save(product);
+                return save(product," updateProduct ProductService");
             } else return errorHandler.error("Cannot find product with ID: "+request.getProductId(),"updateProduct ProductService");
         } catch (Exception e) {
             return errorHandler.error(e.getMessage(), "updateProduct ProductService");
@@ -60,8 +57,11 @@ public class ProductService {
         return productRepository.findById(productId).orElse(null);
     }
 
-    private ResponsePayload save(Product product) {
-        productRepository.save(product);
-        return ResponsePayload.builder().messageStatusEnum(MessageStatusEnum.OK).build();
+    private ResponsePayload save(Product product, String function ) {
+        List<String> nullList = NullFieldChecker.check(product, "productImage", "productId");
+        if (nullList.isEmpty()) {
+            productRepository.save(product);
+            return ResponsePayload.builder().messageStatusEnum(MessageStatusEnum.OK).build();
+        } else return errorHandler.error(nullList.toString()+"is null", function);
     }
 }
