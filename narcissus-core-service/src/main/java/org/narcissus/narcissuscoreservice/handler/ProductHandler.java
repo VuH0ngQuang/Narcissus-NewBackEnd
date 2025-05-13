@@ -19,6 +19,7 @@ public class ProductHandler extends KafkaRequestHandler {
 
     private static final Logger log = LoggerFactory.getLogger(ProductHandler.class);
     private final ProductUriRouter productUriRouter;
+    private final ObjectMapper objectMapper;
 
     @Autowired
     public ProductHandler(
@@ -32,13 +33,18 @@ public class ProductHandler extends KafkaRequestHandler {
                 1, null
         );
         this.productUriRouter = productUriRouter;
+        this.objectMapper = objectMapper;
     }
 
     @Override
     protected void handle(Message message) {
-        if (message.getMessageType() == MessageTypeEnum.REQUEST) {
-            ResponsePayload responsePayload = productUriRouter.route(message);
-            sendResponse(responsePayload, message.getUri());
-        }
+        try {
+            if (message.getMessageType() == MessageTypeEnum.REQUEST) {
+                log.info(objectMapper.writeValueAsString(message));
+                ResponsePayload responsePayload = productUriRouter.route(message);
+                sendResponse(responsePayload, message.getUri());
+            }
+        } catch (Exception e) {
+            log.error(e.getMessage(), e);        }
     }
 }

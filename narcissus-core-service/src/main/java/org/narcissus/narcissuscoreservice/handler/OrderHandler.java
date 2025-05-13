@@ -13,11 +13,14 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.springframework.stereotype.Service;
 
+@Service
 public class OrderHandler extends KafkaRequestHandler {
 
     private static final Logger log = LoggerFactory.getLogger(OrderHandler.class);
     private final OrderUriRouter orderUriRouter;
+    private final ObjectMapper objectMapper;
     
     @Autowired
     public OrderHandler(
@@ -31,13 +34,19 @@ public class OrderHandler extends KafkaRequestHandler {
         1,null
         );
         this.orderUriRouter = orderUriRouter;
+        this.objectMapper = objectMapper;
     }
 
     @Override
     protected void handle(Message message) {
-        if (message.getMessageType().equals(MessageTypeEnum.REQUEST)) {
-            ResponsePayload responsePayload  = orderUriRouter.route(message);
-            sendResponse(responsePayload, message.getUri());
+        try {
+            if (message.getMessageType().equals(MessageTypeEnum.REQUEST)) {
+                log.info(objectMapper.writeValueAsString(message));
+                ResponsePayload responsePayload  = orderUriRouter.route(message);
+                sendResponse(responsePayload, message.getUri());
+            }
+        } catch (Exception e) {
+            log.error(e.getMessage(), e);
         }
     }
     

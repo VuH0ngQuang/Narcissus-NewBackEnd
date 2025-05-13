@@ -2,6 +2,10 @@ spring:
   data:
     mongodb:
       uri: ${DB_ENDPOINT:mongodb://root:adminphs@localhost:27017/narcissus?directConnection=true&serverSelectionTimeoutMS=2000&authSource=admin&appName=mongosh+1.6.0}
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
+      password: ${REDIS_PASSWORD:phs2023}
 
 app:
   kafka:

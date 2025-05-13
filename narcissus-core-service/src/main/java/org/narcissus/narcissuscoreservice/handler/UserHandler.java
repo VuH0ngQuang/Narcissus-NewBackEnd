@@ -19,6 +19,7 @@ public class UserHandler extends KafkaRequestHandler {
 
     private final static Logger log = LoggerFactory.getLogger(UserHandler.class);
     private final UserUriRouter userUriRouter;
+    private final ObjectMapper objectMapper;
 
     @Autowired
     public UserHandler(
@@ -32,13 +33,19 @@ public class UserHandler extends KafkaRequestHandler {
                 1, null
         );
         this.userUriRouter = userUriRouter;
+        this.objectMapper = objectMapper;
     }
 
     @Override
     protected void handle(Message message) {
-        if (message.getMessageType() == MessageTypeEnum.REQUEST) {
-            ResponsePayload responsePayload = userUriRouter.route(message);
-            sendResponse(responsePayload, message.getUri());
+        try {
+            if (message.getMessageType() == MessageTypeEnum.REQUEST) {
+                log.info(objectMapper.writeValueAsString(message));
+                ResponsePayload responsePayload = userUriRouter.route(message);
+                sendResponse(responsePayload, message.getUri());
+            }
+        } catch (Exception e) {
+            log.error(e.getMessage(), e);
         }
     }
 }

@@ -5,7 +5,7 @@ import org.narcissus.narcissuscoreservice.exceptions.ErrorHandler;
 import org.narcissus.narcissuscoreservice.model.user.UserCart;
 import org.narcissus.narcissuscoreservice.model.user.UserEntity;
 import org.narcissus.narcissuscoreservice.model.messagePayload.ResponsePayload;
-import org.narcissus.narcissuscoreservice.repository.UserRepository;
+import org.narcissus.narcissuscoreservice.services.redis.RedisService;
 import org.narcissus.narcissuscoreservice.utils.NullFieldChecker;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,20 +20,20 @@ import java.util.Set;
 @Service
 public class UserService {
     private static final Logger log = LoggerFactory.getLogger(UserService.class);
-    private final UserRepository userRepository;
+    private final RedisService redisService;
     private final PasswordEncoder passwordEncoder;
     private final ErrorHandler errorHandler;
 
     @Autowired
-    public UserService(UserRepository userRepository, PasswordEncoder passwordEncoder, ErrorHandler errorHandler) {
-        this.userRepository = userRepository;
+    public UserService(RedisService redisService, PasswordEncoder passwordEncoder, ErrorHandler errorHandler) {
+        this.redisService = redisService;
         this.passwordEncoder = passwordEncoder;
         this.errorHandler = errorHandler;
     }
 
     public ResponsePayload createUser (UserEntity request) {
         try {
-            if (userRepository.existsByEmail(request.getEmail())) return errorHandler.error("Email already used","createUser USERSERVICE");
+            if (redisService.getUserId(request.getEmail()) != null) return errorHandler.error("Email already used","createUser USERSERVICE");
             request.setDate(new Date());
             request.setPassword(passwordEncoder.encode(request.getPassword()));
             
@@ -91,12 +91,12 @@ public class UserService {
         } else return errorHandler.error("Cannot find user with ID: "+request.getUserId(),"removeCart USERSERVICE");
     }
 
-    private UserEntity findUser(String userId) {return userRepository.findById(userId).orElse(null);}
+    private UserEntity findUser(String userId) {return redisService.getUser(userId);}
 
     private ResponsePayload save(UserEntity user, String function) {
        List<String> nullList = NullFieldChecker.check(user,  "userCarts","userId");
        if (nullList.isEmpty()) {
-        userRepository.save(user);
+        redisService.saveUser(user.getUserId(), user);
         return ResponsePayload.builder().messageStatusEnum(MessageStatusEnum.OK).build();
        } else return errorHandler.error(nullList.toString()+"is null", function);
     }

@@ -6,51 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="66c8480f-edff-4110-9788-23a18fa8d309" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/narcissus/narcissuscoreservice/NarcissusCoreServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/narcissus/narcissuscoreservice/NarcissusCoreServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/narcissus/narcissuscoreservice/config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/narcissus/narcissuscoreservice/config/AppConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/narcissus/narcissuscoreservice/handler/ProductHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/narcissus/narcissuscoreservice/handler/ProductHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/narcissus/narcissuscoreservice/handler/UserHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/narcissus/narcissuscoreservice/handler/UserHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/narcissus/narcissuscoreservice/kafka/KafkaRequestHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/narcissus/narcissuscoreservice/kafka/KafkaRequestHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/narcissus/narcissuscoreservice/model/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/narcissus/narcissuscoreservice/model/messagePayload/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/narcissus/narcissuscoreservice/model/order/Orders.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/narcissus/narcissuscoreservice/model/order/Orders.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/narcissus/narcissuscoreservice/router/ProductUriRouter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/narcissus/narcissuscoreservice/router/ProductUriRouter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/narcissus/narcissuscoreservice/router/UserUriRouter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/narcissus/narcissuscoreservice/router/UserUriRouter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/narcissus/narcissuscoreservice/services/product/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/narcissus/narcissuscoreservice/services/product/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/narcissus/narcissuscoreservice/services/userEntity/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/narcissus/narcissuscoreservice/services/userEntity/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/narcissus/narcissuscoreservice/utils/NullFieldChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/narcissus/narcissuscoreservice/utils/NullFieldChecker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/NarcissusCoreServiceApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/NarcissusCoreServiceApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/config/AppConfig$Channels.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/config/AppConfig$Channels.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/config/AppConfig$Kafka.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/config/AppConfig$Kafka.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/config/AppConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/config/AppConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/config/SpringConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/config/SpringConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/constants/MessageStatusEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/constants/MessageStatusEnum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/constants/MessageTypeEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/constants/MessageTypeEnum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/constants/RoleEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/constants/RoleEnum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/exceptions/ErrorHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/exceptions/ErrorHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/handler/ProductHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/handler/ProductHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/handler/UserHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/handler/UserHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/kafka/KafkaRequestHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/kafka/KafkaRequestHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/model/Message.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/model/messagePayload/ResponsePayload$ResponsePayloadBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/model/messagePayload/ResponsePayload$ResponsePayloadBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/model/messagePayload/ResponsePayload.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/model/messagePayload/ResponsePayload.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/model/order/ConsistOf.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/model/order/ConsistOf.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/model/order/ConsistOfKey.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/model/order/ConsistOfKey.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/model/order/Orders.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/model/order/Orders.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/model/product/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/model/product/Product.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/model/product/Review.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/model/product/Review.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/model/product/ReviewKey.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/model/product/ReviewKey.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/model/user/UserCart.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/model/user/UserCart.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/model/user/UserEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/model/user/UserEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/repository/ProductRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/repository/ProductRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/repository/UserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/router/ProductUriRouter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/router/ProductUriRouter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/router/UserUriRouter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/router/UserUriRouter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/services/product/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/services/product/ProductService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/services/userEntity/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/services/userEntity/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/utils/NullFieldChecker.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/utils/NullFieldChecker.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/narcissus/narcissuscoreservice/NarcissusCoreServiceApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/narcissus/narcissuscoreservice/NarcissusCoreServiceApplicationTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/narcissus/narcissuscoreservice/handler/OrderHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/narcissus/narcissuscoreservice/handler/OrderHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/narcissus/narcissuscoreservice/services/order/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/narcissus/narcissuscoreservice/services/order/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/handler/OrderHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/narcissus/narcissuscoreservice/handler/OrderHandler.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,29 +59,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "Spring Boot.NarcissusCoreServiceApplication.executor": "Run",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Spring Boot.NarcissusCoreServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.annotationProcessors&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -172,6 +130,7 @@
       <workItem from="1746758852567" duration="210000" />
       <workItem from="1746805475292" duration="425000" />
       <workItem from="1746805911480" duration="2101000" />
+      <workItem from="1746866746841" duration="1936000" />
     </task>
     <servers />
   </component>
@@ -182,16 +141,5 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/narcissus/narcissuscoreservice/services/product/ProductService.java</url>
-          <line>60</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
