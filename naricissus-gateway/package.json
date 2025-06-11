@@ -1,0 +1,29 @@
+{
+  "name": "naricissus-gateway",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "app.ts",
+  "repository": "git@github.com:VuH0ngQuang/Narcissus-NewBackEnd.git",
+  "author": "VuH0ngQuang",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "redis": "^5.0.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.2",
+    "@types/node": "^22.15.21",
+    "eslint": "^9.27.0",
+    "nodemon": "^3.1.10",
+    "prettier": "^3.5.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "dev": "nodemon --watch src/**/*.ts --exec \"node --loader ts-node/esm src/server.ts\"",
+    "lint": "eslint 'src/**/*.ts'"
+  }
+}

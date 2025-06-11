@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Debug TypeScript",
+            "skipFiles": ["<node_internals>/**"],
+            "program": "${workspaceFolder}/src/Server.ts",
+            "runtimeArgs": ["--loader", "ts-node/esm"],
+            "outFiles": ["${workspaceFolder}/dist/**/*.js"],
+            "sourceMaps": true,
+            "resolveSourceMapLocations": [
+                "${workspaceFolder}/**",
+                "!**/node_modules/**"
+            ],
+            "console": "integratedTerminal"
+        }
+    ]
+} 

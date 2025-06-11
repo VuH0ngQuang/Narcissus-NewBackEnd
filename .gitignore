@@ -3,3 +3,6 @@
 
 # Ignore .idea directories
 **/.idea/
+
+# Ignore node_modules
+**/node_modules/
